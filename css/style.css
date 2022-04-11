@@ -1,0 +1,289 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: 'Poppins', sans-serif;
+  letter-spacing: 1.6px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto; 
+  }
+  i {
+    font-size: 20px;
+  }
+  i.faceBook {
+    color: rgb(83, 125, 216);
+  }
+  i.twiTTer {
+    color: #00acee;
+  }
+  i.instaGram{
+    color: #fbad50;
+  }
+  i.youTube{
+    color: #ff0000;
+  }
+  /* Small */
+@media ( min-width: 768px ) {
+    .container {
+      width: 750px;
+    }
+  }
+  /* Medium */
+  @media ( min-width: 992px ) {
+    .container {
+      width: 970px;
+    }
+  }
+  /* Large */
+  @media ( min-width: 1200px ) {
+    .container {
+      width: 1170px;
+    }
+  }
+  .social-dashboard {
+    background-color: rgba(0, 0, 0);
+    min-height: 600px;
+    color: white;
+    padding: 20px 0 30px;
+  }
+  
+  .social-dashboard header {
+    height: 72px;
+    max-height: fit-content;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  @media ( max-width: 767px ) {
+    .social-dashboard header {
+      height: 120px;
+      flex-wrap: wrap;
+      justify-content: center;
+      text-align: center;
+    }
+  }
+  .social-dashboard header .info {
+    margin-right: 30px;
+  }
+  @media ( max-width: 767px ) {
+    .social-dashboard header .info {
+      margin-right: 0px;
+    }
+  }
+  .social-dashboard header .info p {
+    font-size: 12px;
+  }
+  .social-dashboard header .mode {
+    display: flex;
+  }
+  @media ( max-width: 767px ) {
+    .social-dashboard header .mode {
+      justify-content: space-between;
+      min-width: 150px;
+    }
+  }
+  .social-dashboard header .mode p{
+    font-size: 12px;
+    color: white;
+  }
+  .social-dashboard header .mode span{
+    width: 55px;
+    height: 22px;
+    margin-left: 6px;
+    background-color: rgb(57, 187, 187);
+    border-radius: 10px ;
+    -webkit-border-radius: 10px ;
+    -moz-border-radius: 10px ;
+    -ms-border-radius: 10px ;
+    -o-border-radius: 10px ;
+    cursor: pointer;
+    position: relative;
+}
+.social-dashboard header .mode span::before {
+  content: '';
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: 50%;
+  left: var(--zana , 1px);
+  transform: translateY(-50%);
+  background-color: rgb(29, 20, 104);
+  border-radius: 50px;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  -ms-border-radius: 50px;
+  -o-border-radius: 50px;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  transition: 0.3s linear;
+  -webkit-transition: 0.3s linear;
+  -moz-transition: 0.3s linear;
+  -ms-transition: 0.3s linear;
+  -o-transition: 0.3s linear;
+}
+/* .social-dashboard header .mode span:hover::before {
+  left: 34px;
+} */
+.followers {
+  margin-top: 30px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill,minmax(200px,1fr));
+  gap: 40px;
+}
+.followers .box {
+  color: white;
+  height: 140px;
+  padding: 20px 0 6px;
+  background-color: rgb(1, 45, 75);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  top: 0;
+  transition: top 0.3s;
+  -webkit-transition: top 0.3s;
+  -moz-transition: top 0.3s;
+  -ms-transition: top 0.3s;
+  -o-transition: top 0.3s;
+}
+.followers .box:hover {
+  top: -4px;
+}
+.followers .box::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-image: linear-gradient(to right,#8a3ab9,#bc2a8d,#fccc63,#fbad50);
+}
+.followers .box:hover::before {
+  opacity: 0;
+  transition: opacity 0.5s;
+  -webkit-transition: opacity 0.5s;
+  -moz-transition: opacity 0.5s;
+  -ms-transition: opacity 0.5s;
+  -o-transition: opacity 0.5s;
+}
+.followers .box::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0%;
+  height: 2px;
+  background-color: #2abc6c;
+  transition: 0.5s;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -ms-transition: 0.5s;
+  -o-transition: 0.5s;
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+}
+.followers .box:hover::after {
+  width: 100%;
+}
+.followers .box .user-account {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2px;
+}
+.followers .box .user-account span {
+  font-size: 10px;
+  color: #888;
+}
+.followers .box .followers-number {
+  position: relative;
+  text-transform: uppercase;
+}
+.followers .box .followers-number span {
+  font-size: 46px;
+}
+.followers .box .followers-number p {
+  color: #888;
+  font-size: 8px;
+  letter-spacing: 3.6px;
+  position: absolute;
+  top: 52px;
+  left: 50%;
+  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+}
+.followers .box .data {
+  color: green;
+  text-align: center;
+  font-size: 10px;
+  line-height: 3;
+}
+.overview {
+  margin-top: 30px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill,minmax(200px,1fr));
+  gap: 40px;
+}
+h3 {
+  margin-top: 30px;
+}
+.overview .overview-box {
+  background-color: rgb(1, 45, 75);
+  min-height: 90px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+}
+.overview .overview-box:hover {
+  box-shadow: 0 0 10px 0 rgba(255, 255, 255, 0.445);
+}
+.overview .overview-box .overview-box-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.overview .overview-box .overview-box-title p {
+  font-size: 12px;
+  color: #999;
+  letter-spacing: 0.6px;
+}
+.overview .overview-box .overview-box-numbers {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.overview .overview-box .overview-box-numbers > span {
+  font-size: 22px;
+  
+}
+.overview .overview-box .overview-box-numbers span:nth-child(2) {
+  font-size: 10px;
+  color: #fbad50;
+}
